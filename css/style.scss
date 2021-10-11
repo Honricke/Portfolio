@@ -45,6 +45,7 @@ body{
     backdrop-filter: blur(5px);
 }
 header{
+    z-index: 1;
     position: absolute;
     width: 100%;
     display: flex;
