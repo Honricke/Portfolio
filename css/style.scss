@@ -10,7 +10,7 @@
 html,body{
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 body::after{
     content: '';
@@ -36,8 +36,9 @@ body{
 .content{
     z-index: 1;
     position: relative;
+    padding: 20px;
     width: 1050px;
-    height: 95%;
+    min-height: 95%;
     margin: 20px auto;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 50px;
@@ -69,6 +70,8 @@ header{
     align-items: center;
     justify-content: space-evenly;
     height: 100%;
+    flex-wrap: wrap;
+    position: relative;
 }
 .me{
     display: flex;
@@ -136,6 +139,7 @@ header{
     }
 }
 .cards{
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,8 +159,14 @@ header{
     background: rgba(255, 255, 255, 0.3);
     position: relative;
     backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
     &::after{
-        transform: translate(50%,-50%);
+        top: 0;
+        transform: translate(75%,-50%);
         position: absolute;
         content:"";
         width: 65px;
@@ -177,6 +187,12 @@ header{
         border-radius: inherit;
         animation: ocilarvert2 2s infinite;
     }
+    img{
+        display: block;
+        width: 65px;
+        height: 65px;
+        flex-basis: 50px;
+    }
 }
 
 @keyframes ocilar{ 
@@ -185,9 +201,9 @@ header{
     100% {transform: translateX(0%)}
 }
 @keyframes ocilarvert1{ 
-    0% {transform: translate(50%,-50%)}
-    50% {transform: translate(50%,-45%)}
-    100% {transform: translate(50%,-50%)}
+    0% {transform: translate(-75%,-50%)}
+    50% {transform: translate(-75%,-45%)}
+    100% {transform: translate(-75%,-50%)}
 }
 @keyframes ocilarvert2{ 
     0% {transform: translate(-125%,-50%)}
