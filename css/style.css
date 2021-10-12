@@ -271,7 +271,7 @@ body {
   header {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 1200px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
