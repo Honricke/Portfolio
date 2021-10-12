@@ -4,7 +4,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: white;
+  color: black;
   font-family: "Poppins",sans-serif;
   text-decoration: none;
 }
@@ -16,9 +16,6 @@ html, body {
 }
 
 body {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#DB82D7), to(#B75858));
-  background-image: linear-gradient(#DB82D7, #B75858);
-  background-size: 100% 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,7 +59,7 @@ header .navbar {
 
 header .navbar li a {
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .glass {
@@ -72,9 +69,8 @@ header .navbar li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   height: 100%;
 }
 
@@ -110,7 +106,6 @@ header .navbar li a {
 .me .name h3 {
   font-size: 20px;
   font-weight: normal;
-  color: #dbdbdb;
 }
 
 .me .name h1 {
@@ -120,7 +115,7 @@ header .navbar li a {
 
 .me .btncontato {
   margin-top: -100px;
-  background-color: #BB10ED;
+  background-color: black;
   border-radius: 50px;
   width: 275px;
   height: 70px;
@@ -158,6 +153,7 @@ header .navbar li a {
   height: 100%;
   text-align: center;
   line-height: 65px;
+  color: white;
 }
 
 .me .btncontato a img {
@@ -171,7 +167,7 @@ header .navbar li a {
 .me .btncontato::after {
   position: absolute;
   content: "";
-  border: 1px solid white;
+  border: 1px solid black;
   -webkit-transform: translate(2.5%, 15%);
           transform: translate(2.5%, 15%);
   width: 270px;
@@ -206,7 +202,7 @@ header .navbar li a {
   border-radius: 15px;
   width: 280px;
   height: 280px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.3);
   position: relative;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
@@ -219,7 +215,7 @@ header .navbar li a {
   content: "";
   width: 65px;
   height: 65px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: inherit;
   -webkit-animation: ocilarvert1 2s infinite;
           animation: ocilarvert1 2s infinite;
@@ -236,7 +232,7 @@ header .navbar li a {
   content: "";
   width: 100px;
   height: 100px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: inherit;
   -webkit-animation: ocilarvert2 2s infinite;
           animation: ocilarvert2 2s infinite;
