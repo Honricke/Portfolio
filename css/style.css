@@ -262,6 +262,10 @@ body {
     height: 35px;
     display: inline-block;
   }
+  .cards {
+    -webkit-transform: scale(140%, 125%);
+            transform: scale(140%, 125%);
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -271,7 +275,7 @@ body {
   header {
     position: fixed;
     top: 0;
-    width: 1200px;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
