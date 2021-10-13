@@ -30,17 +30,15 @@ main{
 .section-1{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    height: 550px;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 .title-btn-contato{
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
-    height: 100%;
+    flex-direction: column;
     .btn-contato{
-        margin-top: -100px;
+        margin-top: 50px;
         background-color: $primarycor;
         border-radius: 50px;
         width: 275px;
@@ -85,16 +83,13 @@ main{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 535px;
-        height: 140px;
+        min-width: min-content;
         h3{
-            font-size: 20px;
             font-weight: normal;
             color: $corh3;
         }
         h1{
             font-weight: 700;
-            font-size: 35px;
             color: $corh1;
         }
     }   
@@ -145,66 +140,49 @@ main{
     }
 }
 .section-2{
-    //background-color: white;
     width: 100%;
     height: 550px;
 }
-
+//Mobile Aplication
 @media only screen and (max-width: 600px){
     .navbar{
         display: none; 
     }
-    .mobile-nav{
-        z-index: 1;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        height: 80px;
-        background: rgba(255, 255, 255, 0.1);
-        border-top: 1px solid rgba(255, 255, 255, 0.3);
-        backdrop-filter: blur(100px);
-        ul{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 100%;
-            .icon{
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                align-items: center;
-                font-weight: 400;
-                font-size: 10pt;
-            }
-            img{
-                width: 35px;
-                height: 35px;
-                display: inline-block;
-            }
+    .title-me{
+        text-align: center;
+        height: 100px;
+        h3{
+            font-size: 15px;
+        }
+        h1{
+            font-size: 25px;
         }
     }
-    .cards{
-        //transform: scale(140%, 125%);
+    .section-1{
+        height: 700px;
+        .cards{
+            order: 1;
+            transform: scale(80%);
+        }
+        .title-btn-contato{
+            order: 2;
+            align-items: center;
+        }
     }
 }
+//Desktop Aplication
 @media only screen and (min-width: 600px){
-    .mobile-nav{
-        display: none;
-    }
     .navbar{
         z-index: 1;
         height: min-content;
         position: relative;
         left: 50%;
         transform: translatex(-50%);
-        //background: rgba(255, 255, 255, 0.1);
-        //border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         width: 100%;
         max-width: 1050px;
         display: flex;
         justify-content: end;
         padding: 30px;
-        //backdrop-filter: blur(25px);
         .menu{
             width: 375px;
             display: flex;
@@ -215,6 +193,21 @@ main{
                 color: $corh1;
             }
         }
+    }
+    .title-btn-contato{
+        height: 100%;
+    }
+    .title-me{
+        height: 140px;
+        h3{
+            font-size: 20px;
+        }
+        h1{
+            font-size: 35px;
+        }
+    }
+    .section-1{
+        height: 550px;
     }
 }
 
