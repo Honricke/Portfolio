@@ -152,6 +152,7 @@ main{
     width: 100%;
     height: 550px;
 }
+
 @media only screen and (max-width: 600px){
     .navbar{
         display: none; 
@@ -186,7 +187,7 @@ main{
         }
     }
     .cards{
-        transform: scale(140%, 125%);
+        //transform: scale(140%, 125%);
     }
 }
 @media only screen and (min-width: 600px){

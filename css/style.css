@@ -272,10 +272,6 @@ main {
     height: 35px;
     display: inline-block;
   }
-  .cards {
-    -webkit-transform: scale(140%, 125%);
-            transform: scale(140%, 125%);
-  }
 }
 
 @media only screen and (min-width: 600px) {
