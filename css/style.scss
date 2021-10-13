@@ -9,6 +9,7 @@ $primarycor: #BB10ED;
     color: white;
     font-family: "Poppins",sans-serif;
     text-decoration: none;
+    outline: none;
 }
 html,body{
     width: 100%;
@@ -17,32 +18,31 @@ html,body{
 }
 body{
     background-image: linear-gradient(#DB82D7,#B75858);
-    background-size: 100% 100vh ;
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
     display: flex;
+    flex-direction: column;
 }
-.content{
-    z-index: 1;
+main{
     position: relative;
-    width: 1050px;
+    max-width: 1050px;
+    width: 100%;
     height: 100%;
-    margin: 20px auto;
-    border-radius: 50px;
-    //backdrop-filter: blur(5px);
+    margin: 0 auto;
 }
-
-.glass{
+.section-1{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    height: 550px;
     flex-wrap: wrap;
-    height: 100vh;
 }
-.me{
+.title-btn-contato{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
-    .btncontato{
+    .btn-contato{
         margin-top: -100px;
         background-color: $primarycor;
         border-radius: 50px;
@@ -55,7 +55,6 @@ body{
         align-items: center;
         justify-content: space-evenly;
         &:hover:after{
-            //opacity: 0;
             transform: translate(0%);
             transition: 0.5s;
         }
@@ -85,7 +84,7 @@ body{
             z-index: -1;
         }
     }
-    .name{
+    .title-me{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -107,7 +106,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    .bkcard{
+    .back-card{
         position: absolute;
         width: 175px;
         height: 400px;
@@ -148,11 +147,16 @@ body{
         }
     }
 }
+.section-2{
+    //background-color: white;
+    width: 100%;
+    height: 550px;
+}
 @media only screen and (max-width: 600px){
-    header{
+    .navbar{
         display: none; 
     }
-    .mobilenav{
+    .mobile-nav{
         z-index: 1;
         position: fixed;
         bottom: 0;
@@ -160,7 +164,7 @@ body{
         height: 80px;
         background: rgba(255, 255, 255, 0.1);
         border-top: 1px solid rgba(255, 255, 255, 0.3);
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(100px);
         ul{
             display: flex;
             justify-content: space-around;
@@ -186,28 +190,30 @@ body{
     }
 }
 @media only screen and (min-width: 600px){
-    .mobilenav{
+    .mobile-nav{
         display: none;
     }
-    header{
-        position: fixed;
-        top: 0;
+    .navbar{
+        z-index: 1;
+        height: min-content;
+        position: relative;
+        left: 50%;
+        transform: translatex(-50%);
+        //background: rgba(255, 255, 255, 0.1);
+        //border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         width: 100%;
+        max-width: 1050px;
         display: flex;
         justify-content: end;
         padding: 30px;
-        transform: translateX(-5%);
-        nav{
+        //backdrop-filter: blur(25px);
+        .menu{
             width: 375px;
-        }
-        .navbar{
             display: flex;
             justify-content: space-between;
-            li{
-                a{
-                    font-size: 15px;
-                    font-weight: 500;
-                }
+            a{
+                font-size: 15px;
+                font-weight: 500;
             }
         }
     }
@@ -220,11 +226,11 @@ body{
 }
 @keyframes ocilarvert1{ 
     0% {transform: translate(50%,-50%)}
-    50% {transform: translate(50%,-45%)}
+    50% {transform: translate(50%,-40%)}
     100% {transform: translate(50%,-50%)}
 }
 @keyframes ocilarvert2{ 
     0% {transform: translate(-125%,-50%)}
-    50% {transform: translate(-125%,-45%)}
+    50% {transform: translate(-125%,-55%)}
     100% {transform: translate(-125%,-50%)}
 }

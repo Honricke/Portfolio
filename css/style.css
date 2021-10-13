@@ -7,6 +7,7 @@
   color: white;
   font-family: "Poppins",sans-serif;
   text-decoration: none;
+  outline: none;
 }
 
 html, body {
@@ -18,22 +19,26 @@ html, body {
 body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#DB82D7), to(#B75858));
   background-image: linear-gradient(#DB82D7, #B75858);
+  background-repeat: no-repeat;
   background-size: 100% 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.content {
-  z-index: 1;
+main {
   position: relative;
-  width: 1050px;
+  max-width: 1050px;
+  width: 100%;
   height: 100%;
-  margin: 20px auto;
-  border-radius: 50px;
+  margin: 0 auto;
 }
 
-.glass {
+.section-1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,12 +47,12 @@ body {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  height: 550px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 100vh;
 }
 
-.me {
+.title-btn-contato {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,7 +66,7 @@ body {
   height: 100%;
 }
 
-.me .btncontato {
+.title-btn-contato .btn-contato {
   margin-top: -100px;
   background-color: #BB10ED;
   border-radius: 50px;
@@ -80,14 +85,14 @@ body {
           justify-content: space-evenly;
 }
 
-.me .btncontato:hover:after {
+.title-btn-contato .btn-contato:hover:after {
   -webkit-transform: translate(0%);
           transform: translate(0%);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.me .btncontato a {
+.title-btn-contato .btn-contato a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,7 +108,7 @@ body {
   line-height: 65px;
 }
 
-.me .btncontato a img {
+.title-btn-contato .btn-contato a img {
   -webkit-animation: ocilar 3s infinite linear;
           animation: ocilar 3s infinite linear;
   display: block;
@@ -111,7 +116,7 @@ body {
   height: 20px;
 }
 
-.me .btncontato::after {
+.title-btn-contato .btn-contato::after {
   position: absolute;
   content: "";
   border: 1px solid #fff;
@@ -123,7 +128,7 @@ body {
   z-index: -1;
 }
 
-.me .name {
+.title-btn-contato .title-me {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,13 +143,13 @@ body {
   height: 140px;
 }
 
-.me .name h3 {
+.title-btn-contato .title-me h3 {
   font-size: 20px;
   font-weight: normal;
   color: #d6d6d6;
 }
 
-.me .name h1 {
+.title-btn-contato .title-me h1 {
   font-weight: 700;
   font-size: 35px;
   color: #fff;
@@ -162,7 +167,7 @@ body {
           align-items: center;
 }
 
-.cards .bkcard {
+.cards .back-card {
   position: absolute;
   width: 175px;
   height: 400px;
@@ -214,11 +219,16 @@ body {
           backdrop-filter: blur(5px);
 }
 
+.section-2 {
+  width: 100%;
+  height: 550px;
+}
+
 @media only screen and (max-width: 600px) {
-  header {
+  .navbar {
     display: none;
   }
-  .mobilenav {
+  .mobile-nav {
     z-index: 1;
     position: fixed;
     bottom: 0;
@@ -226,10 +236,10 @@ body {
     height: 80px;
     background: rgba(255, 255, 255, 0.1);
     border-top: 1px solid rgba(255, 255, 255, 0.3);
-    -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(100px);
+            backdrop-filter: blur(100px);
   }
-  .mobilenav ul {
+  .mobile-nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -240,7 +250,7 @@ body {
             align-items: center;
     height: 100%;
   }
-  .mobilenav ul .icon {
+  .mobile-nav ul .icon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -257,7 +267,7 @@ body {
     font-weight: 400;
     font-size: 10pt;
   }
-  .mobilenav ul img {
+  .mobile-nav ul img {
     width: 35px;
     height: 35px;
     display: inline-block;
@@ -269,13 +279,20 @@ body {
 }
 
 @media only screen and (min-width: 600px) {
-  .mobilenav {
+  .mobile-nav {
     display: none;
   }
-  header {
-    position: fixed;
-    top: 0;
+  .navbar {
+    z-index: 1;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translatex(-50%);
+            transform: translatex(-50%);
     width: 100%;
+    max-width: 1050px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -283,13 +300,9 @@ body {
         -ms-flex-pack: end;
             justify-content: end;
     padding: 30px;
-    -webkit-transform: translateX(-5%);
-            transform: translateX(-5%);
   }
-  header nav {
+  .navbar .menu {
     width: 375px;
-  }
-  header .navbar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -297,7 +310,7 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  header .navbar li a {
+  .navbar .menu a {
     font-size: 15px;
     font-weight: 500;
   }
@@ -339,8 +352,8 @@ body {
             transform: translate(50%, -50%);
   }
   50% {
-    -webkit-transform: translate(50%, -45%);
-            transform: translate(50%, -45%);
+    -webkit-transform: translate(50%, -40%);
+            transform: translate(50%, -40%);
   }
   100% {
     -webkit-transform: translate(50%, -50%);
@@ -354,8 +367,8 @@ body {
             transform: translate(50%, -50%);
   }
   50% {
-    -webkit-transform: translate(50%, -45%);
-            transform: translate(50%, -45%);
+    -webkit-transform: translate(50%, -40%);
+            transform: translate(50%, -40%);
   }
   100% {
     -webkit-transform: translate(50%, -50%);
@@ -369,8 +382,8 @@ body {
             transform: translate(-125%, -50%);
   }
   50% {
-    -webkit-transform: translate(-125%, -45%);
-            transform: translate(-125%, -45%);
+    -webkit-transform: translate(-125%, -55%);
+            transform: translate(-125%, -55%);
   }
   100% {
     -webkit-transform: translate(-125%, -50%);
@@ -384,8 +397,8 @@ body {
             transform: translate(-125%, -50%);
   }
   50% {
-    -webkit-transform: translate(-125%, -45%);
-            transform: translate(-125%, -45%);
+    -webkit-transform: translate(-125%, -55%);
+            transform: translate(-125%, -55%);
   }
   100% {
     -webkit-transform: translate(-125%, -50%);
