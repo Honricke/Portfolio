@@ -1,90 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+$corh3:rgb(0, 0, 0);
+$corh1: #000;
+$primarycor: #000;
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: black;
+    color: white;
     font-family: "Poppins",sans-serif;
     text-decoration: none;
+    outline: none;
 }
 html,body{
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 body{
     display: flex;
+    flex-direction: column;
 }
-.content{
-    z-index: 1;
+main{
     position: relative;
-    width: 1050px;
-    height: 100%;
-    margin: 20px auto;
-    border-radius: 50px;
-    //backdrop-filter: blur(5px);
-}
-header{
-    position: absolute;
+    max-width: 1050px;
     width: 100%;
-    display: flex;
-    justify-content: end;
-    padding: 30px;
-    transform: translateX(-5%);
-    nav{
-        width: 375px;
-    }
-    .navbar{
-        display: flex;
-        justify-content: space-between;
-        li{
-            a{
-                font-size: 15px;
-                font-weight: 700;
-            }
-        }
-    }
+    height: 100%;
+    margin: 0 auto;
 }
-.glass{
+.section-1{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 100%;
+    height: 550px;
+    flex-wrap: wrap;
 }
-.me{
+.title-btn-contato{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
-    .name{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 535px;
-        height: 140px;
-        h3{
-            font-size: 20px;
-            font-weight: normal;
-        }
-        h1{
-            font-weight: 700;
-            font-size: 35px;
-        }
-    }   
-    .btncontato{
+    .btn-contato{
         margin-top: -100px;
-        background-color: black;
+        background-color: $primarycor;
         border-radius: 50px;
         width: 275px;
         height: 70px;
         font-size: 22px;
         font-weight: 400;
-
+    
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         &:hover:after{
-            //opacity: 0;
             transform: translate(0%);
             transition: 0.5s;
         }
@@ -96,7 +63,6 @@ header{
             height: 100%;
             text-align: center;
             line-height: 65px;
-            color: white;
             img{
                 animation: ocilar 3s infinite linear;
                 display: block;
@@ -107,7 +73,7 @@ header{
         &::after{
             position: absolute;
             content: "";
-            border: 1px solid black;
+            border: 1px solid $corh1;
             transform: translate(2.5%,15%);
             width: 270px;
             height: 65px;
@@ -115,12 +81,29 @@ header{
             z-index: -1;
         }
     }
+    .title-me{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 535px;
+        height: 140px;
+        h3{
+            font-size: 20px;
+            font-weight: normal;
+            color: $corh3;
+        }
+        h1{
+            font-weight: 700;
+            font-size: 35px;
+            color: $corh1;
+        }
+    }   
 }
 .cards{
     display: flex;
     justify-content: center;
     align-items: center;
-    .bkcard{
+    .back-card{
         position: absolute;
         width: 175px;
         height: 400px;
@@ -161,7 +144,79 @@ header{
         }
     }
 }
+.section-2{
+    //background-color: white;
+    width: 100%;
+    height: 550px;
+}
 
+@media only screen and (max-width: 600px){
+    .navbar{
+        display: none; 
+    }
+    .mobile-nav{
+        z-index: 1;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+        background: rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(100px);
+        ul{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+            .icon{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                font-weight: 400;
+                font-size: 10pt;
+            }
+            img{
+                width: 35px;
+                height: 35px;
+                display: inline-block;
+            }
+        }
+    }
+    .cards{
+        //transform: scale(140%, 125%);
+    }
+}
+@media only screen and (min-width: 600px){
+    .mobile-nav{
+        display: none;
+    }
+    .navbar{
+        z-index: 1;
+        height: min-content;
+        position: relative;
+        left: 50%;
+        transform: translatex(-50%);
+        //background: rgba(255, 255, 255, 0.1);
+        //border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        width: 100%;
+        max-width: 1050px;
+        display: flex;
+        justify-content: end;
+        padding: 30px;
+        //backdrop-filter: blur(25px);
+        .menu{
+            width: 375px;
+            display: flex;
+            justify-content: space-between;
+            a{
+                font-size: 15px;
+                font-weight: 700;
+                color: $corh1;
+            }
+        }
+    }
+}
 
 @keyframes ocilar{ 
     0% {transform: translateX(0)}
@@ -170,11 +225,11 @@ header{
 }
 @keyframes ocilarvert1{ 
     0% {transform: translate(50%,-50%)}
-    50% {transform: translate(50%,-45%)}
+    50% {transform: translate(50%,-40%)}
     100% {transform: translate(50%,-50%)}
 }
 @keyframes ocilarvert2{ 
     0% {transform: translate(-125%,-50%)}
-    50% {transform: translate(-125%,-45%)}
+    50% {transform: translate(-125%,-55%)}
     100% {transform: translate(-125%,-50%)}
 }
