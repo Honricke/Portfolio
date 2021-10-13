@@ -232,6 +232,7 @@ main {
     font-size: 25px;
   }
   .section-1 {
+    padding-bottom: 50px;
     height: 700px;
   }
   .section-1 .cards {
