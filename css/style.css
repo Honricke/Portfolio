@@ -304,6 +304,11 @@ main {
         -ms-flex-align: center;
             align-items: center;
   }
+  .navbar {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
   .navbar .menu {
     z-index: 998;
     position: fixed;
@@ -343,12 +348,6 @@ main {
     -webkit-transition: .4s linear;
     transition: .4s linear;
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
     z-index: 998;
     background: transparent;
   }

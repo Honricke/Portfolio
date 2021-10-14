@@ -207,6 +207,7 @@ main{
         }
     }
     .navbar{
+        justify-content: end;
         .menu{
             z-index: 998;
             position: fixed;
@@ -238,8 +239,6 @@ main{
             width: 40px;
             transition: .4s linear;
             position: relative;
-            display: flex;
-            justify-content: end;
             z-index: 998;
             background: transparent;
             &:hover{
