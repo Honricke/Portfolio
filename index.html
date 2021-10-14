@@ -8,44 +8,46 @@
     <title>Portfólio</title>
 </head>
 <body>
-    <div class="content">
-        <header>
-            <nav>
-                <ul class="navbar" type="none"> 
-                    <li><a href="#">Projetos</a></li>
-                    <li><a href="#">O que faço?</a></li>
-                    <li><a href="#">Sobre mim</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="glass">
-            <div class="me">
-                <div class="name">
+    <header class=cabeçalho>
+        <nav class=navbar>
+            <input id="hamburguer" type="checkbox" style="display: none;">
+            <label class="dad-hamburguer" for="hamburguer">
+                <section class="hamburguer">
+                    <div></div>
+                    <div></div>
+                </section>
+            </label>
+            <ul class="menu" type="none"> 
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">O que faço?</a></li>
+                <li><a href="#">Sobre mim</a></li>
+                <li><a href="#">Contate-me</a></li>
+            </ul>
+        </nav>  
+    </header>
+    <main>
+        <section class="section-1 section-pri">
+            <div class="title-btn-contato">
+                <header class="title-me">
                     <h3>Olá,</h3>
                     <h1>Eu sou Henrique Bandeira</h1>
                     <h3>Desenvolvedor e Design Web</h3>
-                </div>
-                <div class="btncontato">
-                    <a href="#">Contate-me 
-                        <div>
-                            <img src="img/seta.png">
-                        </div>
+                </header>
+                <div class="btn-contato">
+                    <a href="#">Meus Projetos
+                        <img src="img/seta.png">
                     </a>
                 </div>
-                </a>
             </div>
             <div class="cards">
-                <div class="card">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-                </div>
-                <div class="bkcard"></div>
+                <div class="card"></div>
+                <div class="back-card"></div>
             </div>
-        </div>
-    </div>
+        </section>
+        <hr style="width: 80%; margin: 0 auto;">
+        <section class="section-2 section-pri">
+        </section>
+    </main>
+    <script src="js/script.js"></script>
 </body>
 </html>
