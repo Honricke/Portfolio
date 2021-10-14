@@ -44,10 +44,10 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 20px 30px 20px 30px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  position: relative;
 }
 
 .navbar .menu {
@@ -305,15 +305,12 @@ main {
             align-items: center;
   }
   .navbar {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
+    height: 80px;
   }
   .navbar .menu {
     z-index: 998;
-    position: fixed;
-    right: 0;
-    top: 80px;
+    position: absolute;
+    top: 100%;
     width: 100%;
     height: 0;
     -webkit-box-orient: vertical;
@@ -338,6 +335,15 @@ main {
     -webkit-transition: 0.5s ease-in;
     transition: 0.5s ease-in;
     color: #000;
+  }
+  .navbar .dad-hamburguer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 30px;
   }
   .navbar .hamburguer {
     z-index: 998;
