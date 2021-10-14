@@ -16,27 +16,15 @@ html,body{
     height: 100%;
     overflow-x: hidden;
 }
-.logo{
-    display: flex;
-    align-items: center; 
-    p{
-        margin-left: 10px;
-        color: $primarycor;
-        font-weight: 600;
-    }
-    img{
-        width: 25px;
-        height: 25px;
-    }
-}
 .navbar{
     z-index: 999;
     margin: 0 auto;
     width: 100%;
     max-width: 1050px;
+    background: #fff;
     
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     position: relative;
     .menu{
         display: flex;
@@ -201,7 +189,7 @@ main{
         height: 700px;
         .cards{
             order: 1;
-            transform: scale(80%);
+            transform: scale(0.8,0.8);
         }
         .title-btn-contato{
             order: 2;

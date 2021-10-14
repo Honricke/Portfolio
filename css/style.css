@@ -16,37 +16,18 @@ html, body {
   overflow-x: hidden;
 }
 
-.logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.logo p {
-  margin-left: 10px;
-  color: #000;
-  font-weight: 600;
-}
-
-.logo img {
-  width: 25px;
-  height: 25px;
-}
-
 .navbar {
   z-index: 999;
   margin: 0 auto;
   width: 100%;
   max-width: 1050px;
+  background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: end;
+          justify-content: flex-end;
   position: relative;
 }
 
@@ -294,8 +275,8 @@ main {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    -webkit-transform: scale(80%);
-            transform: scale(80%);
+    -webkit-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
   }
   .section-1 .title-btn-contato {
     -webkit-box-ordinal-group: 3;
