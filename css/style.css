@@ -141,6 +141,7 @@ main {
 }
 
 .title-btn-contato .btn-contato a {
+  z-index: 999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -311,9 +312,23 @@ main {
   padding: 60px 20px;
   margin: 0 auto;
   width: 95%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.section-2 .projects .project1:hover .img-control {
+  -webkit-transform: translate3d(-10%, 0%, 100px);
+          transform: translate3d(-10%, 0%, 100px);
+}
+
+.section-2 .projects .project1:hover .content-p1 {
+  -webkit-transform: translate3d(0%, 0%, 100px);
+          transform: translate3d(0%, 0%, 100px);
 }
 
 .section-2 .projects .project1 .content-p1 {
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,6 +358,8 @@ main {
 }
 
 .section-2 .projects .img-control {
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
   width: 450px;
   -webkit-transform: translateX(-10%);
           transform: translateX(-10%);
@@ -362,7 +379,7 @@ main {
     font-size: 15px;
   }
   h1 {
-    font-size: 25px;
+    font-size: 22px;
   }
   .section-1 {
     height: 700px;
