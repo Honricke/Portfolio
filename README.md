@@ -1,2 +1,2 @@
 # Portfolio
-Um portfólio mostrando um pouco mim e o que posso fazer
+Um portfólio mostrando um pouco sobre mim e o que posso fazer
